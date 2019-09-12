@@ -32,7 +32,8 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
 
     private static final Uri INTENT_URI_DATA = Uri.parse("https://github.com/lineage-OS-MOD/");
     private static final String TAG = "predatorDialogCtrl";
-    private static final String PREDATOR_VERSION_PROPERTY = "ro.lineage.version";
+    private static final String ROM_VERSION_PROP = "ro.lineage.build.version";
+    private static final String ROM_RELEASETYPE_PROP = "ro.lineage.build.type";
     private final PackageManager mPackageManager = this.mContext.getPackageManager();
 
     public CrvsVersionPreferenceController(Context context, String preferenceKey) {
@@ -43,9 +44,14 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
     }
 
     public CharSequence getSummary() {
-        String crvs = SystemProperties.get(PREDATOR_VERSION_PROPERTY,
+        String predatorVersion = SystemProperties.get(ROM_VERSION_PROP,
                 mContext.getString(R.string.device_info_default));
-        return predator;
+        String predatorReleasetype =  SystemProperties.get(ROM_RELEASETYPE_PROP,
+                this.mContext.getString(R.string.device_info_default));
+        if (!crvsVersion.isEmpty() && !crvsReleasetype.isEmpty())
+            return predatorVersion + " | " + predatorReleasetype;
+        else
+            return mContext.getString(R.string.predator_version_default);
     }
 
     public boolean handlePreferenceTreeClick(Preference preference) {
