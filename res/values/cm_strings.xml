@@ -242,4 +242,8 @@
         <item quantity="one">1 app locked</item>
         <item quantity="other">%d apps locked</item>
     </plurals>
+
+    <!-- Battery temperature -->
+    <string name="battery_temp">Battery temperature</string>
+
 </resources>

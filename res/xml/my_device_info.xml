@@ -28,13 +28,13 @@
         android:selectable="false"
         settings:isPreferenceVisible="false"/>
 
-    <!-- Changelog -->
+    <!-- Changelog
     <Preference
         android:key="changelog"
         android:order="1"
         android:title="@string/changelog_title"
         android:summary="@string/changelog_summary"
-        android:fragment="com.android.settings.nitrogen.Changelog" />
+        android:fragment="com.android.settings.nitrogen.Changelog" /> -->
 
     <!-- Device name -->
     <com.android.settings.widget.ValidatedEditTextPreference
