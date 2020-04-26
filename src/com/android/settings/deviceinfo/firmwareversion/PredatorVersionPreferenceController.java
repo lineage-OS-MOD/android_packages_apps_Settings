@@ -34,6 +34,7 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
     private static final String TAG = "predatorDialogCtrl";
     private static final String ROM_VERSION_PROP = "ro.lineage.build.version";
     private static final String ROM_RELEASETYPE_PROP = "ro.lineage.build.type";
+    private static final String ROM_CODENAME_PROP = "ro.predator.codename";
     private final PackageManager mPackageManager = this.mContext.getPackageManager();
 
     public CrvsVersionPreferenceController(Context context, String preferenceKey) {
@@ -48,8 +49,10 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
                 mContext.getString(R.string.device_info_default));
         String predatorReleasetype =  SystemProperties.get(ROM_RELEASETYPE_PROP,
                 this.mContext.getString(R.string.device_info_default));
+        String crvsCodename = SystemProperties.get(ROM_CODENAME_PROP,
+                mContext.getString(R.string.device_info_default));
         if (!crvsVersion.isEmpty() && !crvsReleasetype.isEmpty())
-            return predatorVersion + " | " + predatorReleasetype;
+            return predatorVersion + " | " + predatorCodename + " | " + predatorReleasetype;
         else
             return mContext.getString(R.string.predator_version_default);
     }
