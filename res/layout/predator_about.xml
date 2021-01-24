@@ -24,7 +24,7 @@
             android:layout_height="150dp"
             android:scaleType="centerInside"
             android:adjustViewBounds="true"
-            android:src="@drawable/bootleg_about"
+            android:src="@drawable/predator_about"
         />
 
 </LinearLayout>

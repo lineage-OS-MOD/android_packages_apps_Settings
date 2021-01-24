@@ -22,11 +22,11 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- Bootleggers About logo -->
+    <!-- Predator About logo -->
     <PreferenceScreen
-        android:key="bootleg_about"
+        android:key="predator_about"
         android:enabled="false"
-        android:layout="@layout/bootleg_about" />
+        android:layout="@layout/predator_about" />
 
     <!-- Android version -->
     <Preference
