@@ -22,11 +22,9 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
-    <!-- Predator  ROM logo -->
-    <com.android.settingslib.widget.LayoutPreference
-        android:key="logo_predator"
-        android:layout="@layout/logo_predator"
-        android:selectable="false"/>
+<PreferenceScreen
+    android:layout="@layout/predator_logo_layout"
+    android:key="predator_logo" />
 
     <!-- Android version -->
     <Preference
