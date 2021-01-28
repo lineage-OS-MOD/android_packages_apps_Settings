@@ -49,9 +49,9 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
                 mContext.getString(R.string.device_info_default));
         String predatorReleasetype =  SystemProperties.get(ROM_RELEASETYPE_PROP,
                 this.mContext.getString(R.string.device_info_default));
-        String crvsCodename = SystemProperties.get(ROM_CODENAME_PROP,
+        String predatorCodename = SystemProperties.get(ROM_CODENAME_PROP,
                 mContext.getString(R.string.device_info_default));
-        if (!crvsVersion.isEmpty() && !crvsReleasetype.isEmpty())
+        if (!predatorVersion.isEmpty() && !predatorReleasetype.isEmpty())
             return predatorVersion + " | " + predatorCodename + " | " + predatorReleasetype;
         else
             return mContext.getString(R.string.predator_version_default);
