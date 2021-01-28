@@ -246,4 +246,7 @@
     <!-- Battery temperature -->
     <string name="battery_temp">Battery temperature</string>
 
+    <string name="maintainer">Maintainer</string>
+    <string name="maintainer_name">Genkzsz</string>
+
 </resources>
