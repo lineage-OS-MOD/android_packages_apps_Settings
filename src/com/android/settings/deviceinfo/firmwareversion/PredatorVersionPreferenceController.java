@@ -37,7 +37,7 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
     private static final String ROM_CODENAME_PROP = "ro.predator.codename";
     private final PackageManager mPackageManager = this.mContext.getPackageManager();
 
-    public CrvsVersionPreferenceController(Context context, String preferenceKey) {
+    public PredatorVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
     public int getAvailabilityStatus() {
