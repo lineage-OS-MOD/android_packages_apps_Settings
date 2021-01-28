@@ -34,6 +34,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- Predator version -->
+    <Preference
+         android:key="predator_version"
+         android:title="@string/predator_version"
+         android:summary="@string/summary_placeholder"
+         settings:enableCopying="true"
+         settings:controller="com.android.settings.deviceinfo.firmwareversion.PredatorVersionPreferenceController"/>
+
     <!-- Lineage version
     <Preference
         android:key="lineage_version"

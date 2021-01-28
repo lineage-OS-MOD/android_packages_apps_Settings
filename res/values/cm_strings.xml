@@ -246,6 +246,10 @@
     <!-- Battery temperature -->
     <string name="battery_temp">Battery temperature</string>
 
+    <!-- About phone screen, Corvus version -->
+    <string name="predator_version">Predator version</string>
+    <string name="predator_version_default">Unknown</string>
+    <string name="keywords_predator_version">predator version</string>
     <string name="maintainer">Maintainer</string>
     <string name="maintainer_name">Genkzsz</string>
 
