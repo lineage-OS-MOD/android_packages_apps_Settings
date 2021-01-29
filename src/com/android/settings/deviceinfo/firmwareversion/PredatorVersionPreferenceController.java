@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -25,6 +25,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
+import androidx.preference.Preference;
+
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 
@@ -34,12 +36,13 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
     private static final String TAG = "predatorDialogCtrl";
     private static final String ROM_VERSION_PROP = "ro.lineage.build.version";
     private static final String ROM_RELEASETYPE_PROP = "ro.lineage.build.type";
-    private static final String ROM_CODENAME_PROP = "ro.predator.codename";
+    private static final String ROM_CODENAME_PROP = "ro.predator.build_codename";
     private final PackageManager mPackageManager = this.mContext.getPackageManager();
 
     public PredatorVersionPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
+
     public int getAvailabilityStatus() {
         return AVAILABLE;
     }
@@ -49,8 +52,8 @@ public class PredatorVersionPreferenceController extends BasePreferenceControlle
                 mContext.getString(R.string.device_info_default));
         String predatorReleasetype =  SystemProperties.get(ROM_RELEASETYPE_PROP,
                 this.mContext.getString(R.string.device_info_default));
-        String predatorCodename = SystemProperties.get(ROM_CODENAME_PROP,
-                mContext.getString(R.string.device_info_default));
+        String predatorCodename =  SystemProperties.get(ROM_CODENAME_PROP,
+                this.mContext.getString(R.string.device_info_default));
         if (!predatorVersion.isEmpty() && !predatorReleasetype.isEmpty())
             return predatorVersion + " | " + predatorCodename + " | " + predatorReleasetype;
         else
